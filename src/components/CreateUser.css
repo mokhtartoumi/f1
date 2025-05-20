@@ -1,0 +1,102 @@
+/* Specific styles for Create User component only */
+.create-user-container {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .create-user-title {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+  }
+  
+  .create-user-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .create-user-input,
+  .create-user-select {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .create-user-input:focus,
+  .create-user-select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+  }
+  
+  .create-user-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 1em;
+  }
+  
+  .create-user-button {
+    padding: 14px;
+    background-color: #16a085;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .create-user-button:hover {
+    background-color: #27ae60;
+  }
+  
+  /* Role-specific input animations */
+  .create-user-input[data-role="chef"],
+  .create-user-input[data-role="assistant"],
+  .create-user-input[data-role="technicien"],
+  .create-user-input[data-role="admin"] {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .create-user-container {
+      padding: 20px 15px;
+      margin: 0 10px;
+    }
+    
+    .create-user-title {
+      font-size: 1.5rem;
+    }
+    
+    .create-user-form {
+      gap: 15px;
+    }
+  }
